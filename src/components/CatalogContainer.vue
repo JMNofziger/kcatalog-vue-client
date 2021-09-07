@@ -21,7 +21,7 @@
         </b-input-group-append>
       </b-input-group>
     </b-form-group>
-    <b-table striped hover :filter="filter" @filtered="onFiltered" :fields=fields :items="items">
+    <b-table striped hover :filter="filter" :fields=fields :items="items">
     </b-table>
   </div>
 </template>
@@ -54,13 +54,6 @@ export default {
       .catch((error) => {
         console.error(error);
       });
-  },
-  methods: {
-    onFiltered(filteredItems) {
-      // Trigger pagination to update the number of buttons/pages due to filtering
-      this.totalRows = filteredItems.length;
-      //  this.currentPage = 1
-    },
   },
 };
 </script>
