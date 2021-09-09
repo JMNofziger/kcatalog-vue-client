@@ -1,28 +1,42 @@
 <template>
   <div class="about">
-    <Header />
-    <b-img center fluid alt="Bush Garden postcard" class="ml-auto" src="https://s3.amazonaws.com/productimages.goantiques.gemr/194408/667228720_fullsize.jpg"></b-img>
-    <b-container class="about-msg">
-      <b-row>
+    <b-container fluid>
+    <b-row>
+    <b-col lg="10" offset-lg="1">
+    <b-container fluid>
+    <b-img left fluid alt="Bush Garden postcard" class="mr-lg-4 mb-4" src="https://s3.amazonaws.com/productimages.goantiques.gemr/194408/667228720_fullsize.jpg"></b-img>
+    </b-container>
+    <b-container fluid class="about-msg">
         <p>{{msg}}</p>
-      </b-row>
+    </b-container>
+    <b-container fluid class="about-msg">
+        <p>{{location}}</p>
+    </b-container>
+    <b-container fluid class="about-msg">
+        <p><b-icon icon="link45deg"></b-icon>
+        <a href="http://www.bushgarden.net/">Original website</a></p>
+    </b-container>
+    </b-col>
+    </b-row>
+    <News />
     </b-container>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/Header.vue';
+import News from '@/components/News.vue';
 
 export default {
   name: 'Home',
   data() {
     return {
-      msg: 'Bush Garden is a wonderful bar/community of people that love to sing and enjoy each other’s company. Karaoke is led by a staff member that receives written customer requests and loads them in the KDJ machine in order of request. Customers make requests by searching the paper catalog (compiled in a binder) for a song, then writing the song’s identifier (usually a couple of letters and numbers) and the song name onto a piece of paper, then submitting the piece of paper to the staff member operating the KDJ machine. The binders are sorted alphabetically by artist or by song name. The KDJ takes the customer request papers and queues up the requested song by either looking up the song identifier (digits and numbers) or searching the name which the customer has written down.',
+      msg: "Bush Garden's lounge has always been a hub of community activity. A regular gathering place - whether it is after work, after leisure, after community events, or for individual milestones (birthdays, weddings, bachelor(ette) parties, retirement, or memorial celebrations), The lounge is a place where people come together to connect and celebrate. It's also a place to unwind or regroup, or just share the company of friends.",
+      location: "Historically located at 614 Maynard Avenue South in Seattle - Bush Garden will reopen at Uncle Bob’s Place. Uncle Bob's Place is currently under construction on the corner of South King Street and 8th Avenue South.",
     };
   },
   components: {
-    Header,
+    News,
   },
 };
 </script>
